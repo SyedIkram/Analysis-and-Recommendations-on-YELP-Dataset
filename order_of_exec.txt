@@ -1,0 +1,26 @@
+must follow order:
+
+${SPARK_HOME}/bin/spark-submit business_etl.py
+${SPARK_HOME}/bin/spark-submit user_etl.py
+${SPARK_HOME}/bin/spark-submit review_classification.py
+${SPARK_HOME}/bin/spark-submit review_etl.py
+
+any order:
+
+${SPARK_HOME}/bin/spark-submit user_recomm.py "'CxDOIDnH8gp9KXzpBHJYXw'"
+# user name can be changed to obtain recommendations for different users
+${SPARK_HOME}/bin/spark-submit user_analysis.py
+${SPARK_HOME}/bin/spark-submit top_reviews.py
+${SPARK_HOME}/bin/spark-submit business_analysis.py
+${SPARK_HOME}/bin/spark-submit restaurant_analysis.py
+${SPARK_HOME}/bin/spark-submit topic_mod_pos.py
+${SPARK_HOME}/bin/spark-submit topic_mod_neg.py
+${SPARK_HOME}/bin/spark-submit topics.py
+${SPARK_HOME}/bin/spark-submit word_cloud.py
+${SPARK_HOME}/bin/spark-submit ngram_word_cloud.py
+
+
+optional:
+
+${SPARK_HOME}/bin/spark-submit converttojson.py
+# for visualization purposes
